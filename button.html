@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>6 Creative Buttons Example</title>
+  <style>
+    body{
+        background-image:url(/6017341.jpg) ;
+        background-repeat: no-repeat;
+        background-size: 1600px;
+    }
+    
+    .button {
+      display: block;
+      font-size: 1.2em;
+      font-weight: bold;
+      padding: 10px 20px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      transition: all 0.3s ease-in-out;
+      margin-bottom: 10px;
+      position: relative;
+      overflow: hidden;
+    }
+   .button:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      z-index: -1;
+      transition: all 0.3s ease-in-out;
+    }
+   .button:hover:before {
+      transform: translateX(-100%);
+    }
+   .button-1 {
+      background-color: #4CAF50;
+      color: white;
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+      border: 2px solid #3e8e41;
+      padding: 15px 30px;
+      border-radius: 25px;
+      transition: all 0.3s ease-in-out;
+    }
+   .button-1:hover {
+      background-color: #3e8e41;
+      color: #fff;
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+      transform: translateY(-5px);
+      animation: pulse 1s ease-in-out infinite;
+    }
+   .button-2 {
+      background-color: #007BFF;
+      color: white;
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+      border: 2px solid #0069d9;
+      padding: 15px 30px;
+      border-radius: 25px;
+      transition: all 0.3s ease-in-out;
+    }
+   .button-2:hover {
+      background-color: #0069d9;
+      color: #fff;
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+      transform: scale(1.1);
+      animation: shake 0.5s ease-in-out infinite;
+    }
+   .button-3 {
+      background-image: linear-gradient(to right, #ff6663, #ffb399);
+      color: white;
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+      border: 2px solid #ff4d5a;
+      padding: 15px 30px;
+      border-radius: 25px;
+      transition: all 0.3s ease-in-out;
+    }
+   .button-3:hover {
+      background-image: linear-gradient(to left, #ff6663, #ffb399);
+      color: #fff;
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+      transform: rotate(5deg);
+      animation: wobble 0.7s ease-in-out infinite;
+    }
+   .button-4 {
+      background-color: #f44336;
+      color: white;
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+      border: 2px solid #d32f2f;
+      padding: 15px 30px;
+      border-radius: 25px;
+      transition: all 0.3s ease-in-out;
+    }
+   .button-4:hover {
+      background-color: #d32f2f;
+      color: #fff;
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+      transform: translateX(10px);
+      animation: jello 1s ease-in-out infinite;
+    }
+   .button-5 {
+      background-color: #2196F3;
+      color: white;
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+      border: 2px solid #0d47a1;
+      padding: 15px 30px;
+      border-radius: 25px;
+      transition: all 0.3s ease-in-out;
+    }
+   .button-5:hover {
+      background-color: #0d47a1;
+      color: #fff;
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+      transform: skewX(-10deg);
+      animation: bounce 0.8s ease-in-out infinite;
+    }
+   .button-6 {
+      background-color: #009688;
+      color: white;
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+      border: 2px solid #006d5c;
+      padding: 15px 30px;
+      border-radius: 25px;
+      transition: all 0.3s ease-in-out;
+    }
+   .button-6:hover {
+      background-color: #006d5c;
+      color: #fff;
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+      transform: rotate(5deg);
+      animation: tada 1s ease-in-out infinite;
+    }
+    .row {
+      display: flex;
+      justify-content: space-between;
+    }
+    @keyframes pulse {
+      0% {
+        transform: translateY(-5px);
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+      }
+      50% {
+        transform: translateY(0px);
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+      }
+      100% {
+        transform: translateY(-5px);
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+      }
+    }
+    @keyframes shake {
+      0% {
+        transform: scale(1.1);
+      }
+      25% {
+        transform: scale(1.1) translateX(-5px);
+      }
+      50% {
+        transform: scale(1.1) translateX(5px);
+      }
+      75% {
+        transform: scale(1.1) translateX(-5px);
+      }
+      100% {
+        transform: scale(1.1);
+      }
+    }
+    @keyframes wobble {
+      0% {
+        transform: rotate(5deg);
+      }
+      20% {
+        transform: rotate(-5deg);
+      }
+      40% {
+        transform: rotate(5deg);
+      }
+      60% {
+        transform: rotate(-5deg);
+      }
+      80% {
+        transform: rotate(5deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+    @keyframes jello {
+      0% {
+        transform: translateX(0px);
+      }
+      20% {
+        transform: translateX(10px);
+      }
+      40% {
+        transform: translateX(-10px);
+      }
+      60% {
+        transform: translateX(10px);
+      }
+      80% {
+        transform: translateX(-10px);
+      }
+      100% {
+        transform: translateX(0px);
+      }
+    }
+    @keyframes bounce {
+      0% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+      100% {
+        transform: translateY(0px);
+      }
+    }
+    @keyframes tada {
+      0% {
+        transform: rotate(0deg);
+      }
+      10% {
+        transform: rotate(10deg);
+      }
+      20% {
+        transform: rotate(-10deg);
+      }
+      30% {
+        transform: rotate(10deg);
+      }
+      40% {
+        transform: rotate(-10deg);
+      }
+      50% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="row">
+    <button class="button button-1">Button 1</button>
+    <button class="button button-2">Button 2</button>
+    <button class="button button-3">Button 3</button>
+  </div>
+  <div class="row">
+    <button class="button button-4">Button 4</button>
+    <button class="button button-5">Button 5</button>
+    <button class="button button-6">Button 6</button>
+  </div>
+</body>
+</html>
